@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BallController : MonoBehaviour
+public class BallControllerW2 : MonoBehaviour
 {
     private Animator ballAni;
 
+    //numbers
     public float BallSpeed;
-    private Rigidbody2D ballRb;
-    //point effector for explosion 
-    private PointEffector2D ballPE2D;
-
     //max explosion time
     public int maxExplosionCount;
     private int currentExplodeLeft;
 
+    //physics
+    private Rigidbody2D ballRb;
+    //point effector for explosion 
+    private PointEffector2D ballPE2D;
+
+    //Ui
     public Text currentExplodeText;
-    //refer game manager
-    public GameManager GameManager;
+    //game manager 
+    GameManagerW2 gameManager;
 
     void Start()
     {
@@ -32,7 +35,7 @@ public class BallController : MonoBehaviour
         currentExplodeLeft = maxExplosionCount;
     }
 
-    
+
     void Update()
     {
         Explode();
@@ -50,12 +53,12 @@ public class BallController : MonoBehaviour
         //use rb instead of transform.position here to emphasise the weight of the steel ball
         if (Input.GetKey(KeyCode.A))
         {
-            ballRb.AddForce(new Vector2(-BallSpeed,0));
+            ballRb.AddForce(new Vector2(-BallSpeed, 0));
             //Debug.Log("holding A");
         }
         if (Input.GetKey(KeyCode.D))
         {
-            ballRb.AddForce(new Vector2(BallSpeed,0));
+            ballRb.AddForce(new Vector2(BallSpeed, 0));
         }
     }
     void Explode()
@@ -82,7 +85,7 @@ public class BallController : MonoBehaviour
         //detect goal zone by tag
         if (collision.tag == "Goal")
         {
-            GameManager.ballIn = true;
+            GameManagerW2.ballIn = true;
         }
     }
 }
