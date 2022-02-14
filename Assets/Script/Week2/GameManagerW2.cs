@@ -29,11 +29,16 @@ public class GameManagerW2 : MonoBehaviour
         //reload the scene by pressing R if is currently not in the menu scene 
         if (Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("week2_Menu"))
         {
+            //reload scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //set totaltime to 0 and reset the bool when restart the scene
+            //only if the player complete the level, reset the timer, otherwise continue counting
+            if (ballIn && cubeIn)
+            {
+                UtilitiesW2.totalTimeSpent = 0;
+            }
+            //reset the static bool when restarting the scene
             ballIn = false;
             cubeIn = false;
-            UtilitiesW2.totalTimeSpent = 0;
         }
     }
     //for start button to refer in the menu scene 

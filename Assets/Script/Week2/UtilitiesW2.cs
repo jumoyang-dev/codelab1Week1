@@ -14,8 +14,8 @@ public class UtilitiesW2 : MonoBehaviour
         {
             totalTimeSpent += Time.deltaTime;
         }
-        //round the number to int and return
-        return Mathf.Round(totalTimeSpent);
+        //round the number to 1 decimal place and return
+        return Mathf.Round(totalTimeSpent*10f)/10f;
     }
 
 }

@@ -12,9 +12,21 @@ public class UIManagerW2 : MonoBehaviour
     //displayer timer
     public Text timer;
     //to help set slider value 
+
+    //display highScore text
+    public Text highScore;
+
+    SaveFile saveFile;
+    //const for the streamReader result
+    public static string CURRENT_SOCRE = "0";
+
     void Start()
     {
         winText.enabled = false;
+        saveFile = FindObjectOfType<SaveFile>();
+
+        //load HighScore when game started
+        CURRENT_SOCRE = saveFile.ReadScore();
     }
     private void Update()
     {
@@ -26,7 +38,17 @@ public class UIManagerW2 : MonoBehaviour
         if (GameManagerW2.ballIn && GameManagerW2.cubeIn)
         {
             winText.enabled = true;
+            //press Q to save
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                //call streamwrite function
+                saveFile.SaveScore();
+                //call streamread function and return a string
+                CURRENT_SOCRE = saveFile.ReadScore();
+            }
         }
+        //display highscore 
+       highScore.text = "Current Fastest: " + CURRENT_SOCRE;
     }
     public void SetSlider(float time)
     {
