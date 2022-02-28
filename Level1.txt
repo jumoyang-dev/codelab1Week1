@@ -1,0 +1,6 @@
+XXXXXXXXXXXXXXXX
+X--C-----------X
+XXXXXX---------X
+X--------------X
+X------000C--00X
+XXXXXXXXXXXXXXXX
