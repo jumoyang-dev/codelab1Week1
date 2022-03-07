@@ -54,7 +54,8 @@ public class ASCIILevelLoader : MonoBehaviour
                         y * brick.transform.localScale.y + yOffset,
                         0
                     );
-            }else if (c == 'C')
+            }
+            else if (c == 'C')
             {
                 GameObject tube = Instantiate(Resources.Load("Tube")) as GameObject;
                 tube.transform.position = new Vector3

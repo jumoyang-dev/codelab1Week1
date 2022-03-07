@@ -34,11 +34,17 @@ public class LevelLoader : MonoBehaviour
         //loop based on how many chars in a row
         for (int x = 0; x < rowString.Length; x++)
         {
+            print(x);
+            //questions:
+                //1. why it needs to times 2
+                //2. the "as GameObject" is casting from Object to GameObject? if is casting whats the difference between Gameobject A = (GameObject) instantiate(xxx)
+                //3. is there a way to simplify the long else if statement?
+            //question end.
+
             //c as the current char
             char c = rowArray[x];
             if (c == '-')
             {
-                Debug.Log(x);
                 GameObject white = Instantiate(Resources.Load("white")) as GameObject;
                 // set pos
                 white.transform.position = new Vector3(x * 2 * white.transform.localScale.x + offset.x , y * 2 * white.transform.localScale.y + offset.y, 0); ;
