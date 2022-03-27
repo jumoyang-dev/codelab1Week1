@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goal
+  - Potato
+  - MoveSpot
+  - head
   layers:
   - Default
   - TransparentFX

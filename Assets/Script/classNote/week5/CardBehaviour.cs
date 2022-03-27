@@ -26,17 +26,7 @@ public class CardBehaviour : MonoBehaviour
 
     void Update()
     {
-        /*
-        switch (currentState)        //cleaner than using if/else statement but functionally doing the same 
-        {
-            case State.FaceDown:
-                myRenderer.color = backColor;
-                break;
-            case State.FaceUp:
-                myRenderer.color = faceColor;
-                break;
-        }
-        */
+        
     }
     
     private void OnMouseDown()
