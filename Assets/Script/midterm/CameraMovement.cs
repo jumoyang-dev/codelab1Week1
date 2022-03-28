@@ -19,7 +19,10 @@ public class CameraMovement : MonoBehaviour
         CameraPan(KeyCode.W, 0, panSpeed);
         CameraPan(KeyCode.S, 0, -panSpeed);
         CameraZoom(KeyCode.Q, -zoomSpeed);
-        CameraZoom(KeyCode.E, zoomSpeed);
+        if (myCam.orthographicSize <= 12)
+        {
+            CameraZoom(KeyCode.E, zoomSpeed);
+        }
     }
     //function to pan the camera
     void CameraPan(KeyCode key, float xSpeed, float ySpeed)
