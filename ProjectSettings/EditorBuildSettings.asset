@@ -5,19 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Class/Menu.unity
     guid: 130d07de51fbe50489240bc566bdf277
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Class/Week2_Class.unity
     guid: 0b9f9813215813c469cca4f95ba9d40d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/week1/week1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Week2/week2_Menu.unity
     guid: f7faa7e561974614ca4bb8c4c61b1298
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Week2/week2_Level1.unity
     guid: 7b31073cd02bb074ca8b11c24a32fd50
+  - enabled: 1
+    path: Assets/Scenes/final/main.unity
+    guid: 9f88fff093e008c4e9c7f2db1c2d17dc
+  - enabled: 1
+    path: Assets/Scenes/midterm/midterm_exe.unity
+    guid: 096a49ea6f130c046bc1e5d78ce419fb
+  - enabled: 1
+    path: Assets/Scenes/final/minigame.unity
+    guid: b651c4972a5164d4ab7a2757426f7ed4
   m_configObjects: {}

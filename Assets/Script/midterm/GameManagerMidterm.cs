@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManagerMidterm : MonoBehaviour
@@ -17,6 +18,7 @@ public class GameManagerMidterm : MonoBehaviour
     {
         return instance;
     }
+    
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -26,9 +28,10 @@ public class GameManagerMidterm : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
     }
+    
         void Start()
     {
         //when the game start, instantiate a Character Prefab on the right screen pos
@@ -52,5 +55,9 @@ public class GameManagerMidterm : MonoBehaviour
         spawnedObject[currentSpawnNum + 1].transform.position = new Vector3(100f, 100f, 0);
         //increase spawn number by 1
         currentSpawnNum++;
+    }
+    public void BackToMain()
+    {
+        SceneManager.LoadScene("main");
     }
 }

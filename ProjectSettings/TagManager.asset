@@ -8,6 +8,12 @@ TagManager:
   - Potato
   - MoveSpot
   - head
+  - teleport
+  - teleportEnd
+  - ROCK
+  - GRASS
+  - POND
+  - Crack
   layers:
   - Default
   - TransparentFX
@@ -18,8 +24,8 @@ TagManager:
   - Ground
   - Mag
   - Ball
-  - 
-  - 
+  - miniGame
+  - Crack
   - 
   - 
   - 
